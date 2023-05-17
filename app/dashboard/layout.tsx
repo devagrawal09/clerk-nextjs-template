@@ -7,7 +7,7 @@ export default function DashboardLayout({
 }) {
   return (
     <>
-      <nav className="fixed flex gap-5 w-full items-center justify-between bg-white px-5 text-black shadow">
+      <nav className="fixed flex gap-5 w-full items-center justify-between bg-white px-5 text-black shadow z-10">
         <h1 className="h-full py-4 font-bold tracking-tight flex-grow">
           Next.js Clerk Starter
         </h1>
