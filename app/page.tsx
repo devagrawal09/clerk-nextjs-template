@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 gap-20">
-      <div className="flex gap-10">
+    <main className="flex min-h-screen flex-col items-center gap-20">
+      <div className="gap-10 flex flex-col sm:flex-row p-24 pb-0">
         <Image
           className="relative"
           src="/next.svg"
@@ -23,7 +23,7 @@ export default function Home() {
           priority
         />
       </div>
-      <p className="text-center">
+      <p className="text-center px-10">
         This is a starter project for building a{" "}
         <a className="underline" href="https://nextjs.org/" target="_blank">
           Next.js
