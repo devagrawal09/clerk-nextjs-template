@@ -23,7 +23,7 @@ export default function Home() {
           priority
         />
       </div>
-      <p className="text-center px-10">
+      <p className="text-center px-10 pb-20">
         This is a starter project for building a{" "}
         <a className="underline" href="https://nextjs.org/" target="_blank">
           Next.js
