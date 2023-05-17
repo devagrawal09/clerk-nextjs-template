@@ -18,7 +18,7 @@ export default async function DashboardPage() {
           <h1 className="text-3xl text-black">
             Welcome, {user.firstName} {user.lastName}
           </h1>
-          <div className="mt-4 grid grid-cols-3 gap-4">
+          <div className="mt-4 grid lg:grid-cols-3 gap-4">
             <UserDetails />
             <SessionDetails />
             <OrgDetails />
