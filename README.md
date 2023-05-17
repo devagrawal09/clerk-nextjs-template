@@ -1,9 +1,5 @@
 <p align="center">
   <a href="https://www.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_vercel_starter" target="_blank" align="center">
-    <picture>
-      <source srcset="./public/next.svg">
-      <img src="./public/next.svg" height="64">
-    </picture>
     <picture style="margin-left: 4rem;">
       <source srcset="./public/clerk.svg">
       <img src="./public/clerk.svg" height="64">
