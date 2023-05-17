@@ -16,7 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        variables: { colorPrimary: "#000000" },
+      }}
+    >
       <html lang="en">
         <body
           className={`${inter.className} bg-gradient-radial from-white to-gray-300 bg-fixed`}
