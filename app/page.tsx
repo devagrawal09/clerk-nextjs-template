@@ -4,48 +4,77 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center gap-20">
-      <div className="gap-10 flex flex-col sm:flex-row p-24 pb-0">
-        <Image
-          className="relative"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <Image
-          className="relative"
-          src="/clerk.svg"
-          alt="Clerk Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-      <p className="text-center px-10 pb-20 text-black">
-        This is a starter project for building a{" "}
-        <a className="underline" href="https://nextjs.org/" target="_blank">
-          Next.js
-        </a>{" "}
-        app with{" "}
-        <a className="underline" href="https://clerk.com" target="_blank">
-          Clerk
-        </a>
-        .
-        <br />
-        <SignedIn>
-          You are signed in.{" "}
-          <Link className="underline" href="/dashboard">
-            Go to dashboard
-          </Link>
-        </SignedIn>
-        <SignedOut>
-          <Link className="underline" href="/sign-up">
-            Sign up
-          </Link>
-        </SignedOut>
-      </p>
+    <main className="">
+      <article className="grid-cols-2 grid">
+        <div className="px-20 py-48">
+          <h1 className="text-6xl bg-gradient-to-r from-[#63DFFA] to-[#6C47FF] bg-clip-text text-transparent font-semibold">
+            Auth starts here.
+          </h1>
+          <p className="mt-2 text-lg">
+            Download our Next.js starter that uses Clerk for authentication and
+            user management. Get started by signing up for an account.
+          </p>
+          <div className="mt-8 flex gap-2">
+            <Link
+              href="/sign-up"
+              className="py-2 px-4 bg-primary text-white rounded-lg"
+            >
+              Sign up
+            </Link>
+            <button className="py-2 px-4">Learn more</button>
+          </div>
+        </div>
+        <div>Images</div>
+      </article>
+      <article className="bg-opacity-5 bg-black px-20 py-24">
+        <h2 className="text-3xl">What's under the hood?</h2>
+        <p>
+          This starter repo uses some of the following features supported by
+          Clerk. To learn more, read our{" "}
+          <a
+            href="https://clerk.com/docs"
+            className="text-primary hover:underline"
+          >
+            documentation
+          </a>
+          .
+        </p>
+        <div className="grid grid-cols-3 mt-8 gap-8">
+          <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
+            <h3 className="text-lg">Embedded Components with Customization</h3>
+            <p className="text-[#344054]">
+              Make our components your own with our extensive customization
+              options.
+            </p>
+            <div className="grow"></div>
+            <a href="" className="text-primary hover:underline">
+              Read components documentation
+            </a>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
+            <h3 className="text-lg">Built-in React Hooks</h3>
+            <p className="text-[#344054]">
+              Building a custom auth flow? Our hooks give all the functionality
+              you need.
+            </p>
+            <div className="grow"></div>
+            <a href="" className="text-primary hover:underline">
+              Read hooks documentation
+            </a>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
+            <h3 className="text-lg">Organizations</h3>
+            <p className="text-[#344054]">
+              Quickly add collaboration and multi-tenancy capabilities into your
+              app.
+            </p>
+            <div className="grow"></div>
+            <a href="" className="text-primary hover:underline">
+              Read organizations documentation
+            </a>
+          </div>
+        </div>
+      </article>
     </main>
   );
 }

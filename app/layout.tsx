@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,10 +35,61 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body
-          className={`${inter.className} bg-gradient-radial from-white to-gray-300 bg-fixed`}
-        >
+        <body className={inter.className}>
+          <header className="flex h-20 pl-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
+            <Image
+              src="/clerk.svg"
+              alt="Clerk Logo"
+              width={102}
+              height={32}
+              priority
+            />
+            X
+            <Image
+              src="/next.svg"
+              alt="Next.js Logo"
+              width={90}
+              height={18}
+              priority
+            />
+          </header>
           {children}
+          <footer className="h-20 flex gap-1 px-20 items-center">
+            <Image
+              src="/clerk.svg"
+              alt="Clerk Logo"
+              width={64}
+              height={32}
+              priority
+            />
+            <span className="text-sm">© 2023</span>
+            <nav className="grow flex gap-8 justify-end">
+              <a
+                className="text-primary hover:underline"
+                href="https://clerk.com"
+              >
+                clerk.com
+              </a>
+              <a
+                className="text-primary hover:underline"
+                href="https://clerk.com"
+              >
+                Twitter
+              </a>
+              <a
+                className="text-primary hover:underline"
+                href="https://clerk.com"
+              >
+                Discord
+              </a>
+              <a
+                className="text-primary hover:underline"
+                href="https://clerk.com"
+              >
+                Documentation
+              </a>
+            </nav>
+          </footer>
         </body>
       </html>
     </ClerkProvider>
