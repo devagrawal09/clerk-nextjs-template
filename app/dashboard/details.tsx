@@ -11,7 +11,12 @@ export function UserDetails() {
   const [jsonOutput, setJsonOutput] = useState(false);
 
   return (
-    <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div
+      className="bg-white overflow-hidden sm:rounded-lg"
+      style={{
+        boxShadow: `0px 20px 24px -4px rgba(16, 24, 40, 0.08)`,
+      }}
+    >
       <div className="flex p-8">
         <h3 className="text-xl leading-6 font-semibold text-gray-900 my-auto">
           User
@@ -23,13 +28,15 @@ export function UserDetails() {
           disabled={!isLoaded}
         />
       </div>
-      <div className="overflow-y-scroll h-full">
-        {isLoaded && user ? (
-          jsonOutput ? (
+      {isLoaded && user ? (
+        jsonOutput ? (
+          <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
             <pre className="px-8 sm:px-6 text-black text-sm">
               {JSON.stringify(user, null, 2)}
             </pre>
-          ) : (
+          </div>
+        ) : (
+          <div className="pb-6 max-h-96">
             <dl>
               <div className="px-8 py-2">
                 <dt className="text-sm font-semibold">User ID</dt>
@@ -77,13 +84,13 @@ export function UserDetails() {
                 </div>
               )}
             </dl>
-          )
-        ) : (
-          <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            Loading user data...
           </div>
-        )}
-      </div>
+        )
+      ) : (
+        <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          Loading user data...
+        </div>
+      )}
     </div>
   );
 }
@@ -93,7 +100,12 @@ export function SessionDetails() {
   const [jsonOutput, setJsonOutput] = useState(false);
 
   return (
-    <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div
+      className="bg-white shadow overflow-hidden sm:rounded-lg"
+      style={{
+        boxShadow: `0px 20px 24px -4px rgba(16, 24, 40, 0.08)`,
+      }}
+    >
       <div className="flex p-8">
         <h3 className="text-xl leading-6 font-semibold text-gray-900 my-auto">
           Session
@@ -104,9 +116,9 @@ export function SessionDetails() {
           disabled={!isLoaded}
         />
       </div>
-      <div className="overflow-y-scroll h-full">
-        {isLoaded && session ? (
-          jsonOutput ? (
+      {isLoaded && session ? (
+        jsonOutput ? (
+          <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
             <pre className="px-4 sm:px-6 text-black text-sm">
               {JSON.stringify(
                 {
@@ -117,7 +129,9 @@ export function SessionDetails() {
                 2
               )}
             </pre>
-          ) : (
+          </div>
+        ) : (
+          <div className="pb-6 max-h-96">
             <dl>
               <div className="px-8 py-2">
                 <dt className="text-sm font-semibold">Session ID</dt>
@@ -152,13 +166,13 @@ export function SessionDetails() {
                 </dd>
               </div>
             </dl>
-          )
-        ) : (
-          <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            Loading user data...
           </div>
-        )}
-      </div>
+        )
+      ) : (
+        <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          Loading user data...
+        </div>
+      )}
     </div>
   );
 }
@@ -168,7 +182,12 @@ export function OrgDetails() {
   const [jsonOutput, setJsonOutput] = useState(false);
 
   return (
-    <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div
+      className="bg-white shadow overflow-hidden sm:rounded-lg"
+      style={{
+        boxShadow: `0px 20px 24px -4px rgba(16, 24, 40, 0.08)`,
+      }}
+    >
       <div className="flex p-8">
         <h3 className="text-xl leading-6 font-semibold text-gray-900 my-auto">
           Organization
@@ -179,14 +198,16 @@ export function OrgDetails() {
           disabled={!(isLoaded && organization)}
         />
       </div>
-      <div className="overflow-y-scroll h-full">
-        {isLoaded ? (
-          organization ? (
-            jsonOutput ? (
+      {isLoaded ? (
+        organization ? (
+          jsonOutput ? (
+            <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
               <pre className="px-4 sm:px-6 text-black text-sm">
                 {JSON.stringify(organization, null, 2)}
               </pre>
-            ) : (
+            </div>
+          ) : (
+            <div className="pb-6 max-h-96">
               <dl>
                 <div className="px-8 py-2">
                   <dt className="text-sm font-semibold">Organization ID</dt>
@@ -228,20 +249,20 @@ export function OrgDetails() {
                   </dd>
                 </div>
               </dl>
-            )
-          ) : (
-            <div className="text-gray-700 px-4 py-5 text-sm">
-              You are currently logged in to your personal workspace.
-              <br />
-              Create or switch to an organization to see its details.
             </div>
           )
         ) : (
-          <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-            Loading organization data...
+          <div className="text-gray-700 px-4 py-5 text-sm">
+            You are currently logged in to your personal workspace.
+            <br />
+            Create or switch to an organization to see its details.
           </div>
-        )}
-      </div>
+        )
+      ) : (
+        <div className="text-gray-700 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+          Loading organization data...
+        </div>
+      )}
     </div>
   );
 }
@@ -257,7 +278,7 @@ function Toggle(props: {
         disabled={props.disabled}
         onClick={props.onChange}
         className={classNames({
-          "rounded-l py-2 px-4 border-solid border border-gray-300 transition text-sm font-semibold":
+          "rounded-l-lg py-2 px-4 border-solid border border-gray-300 transition text-sm font-semibold":
             true,
           "bg-gray-100": !props.checked,
           "bg-gray-50 text-gray-500 cursor-not-allowed": props.disabled,
@@ -269,7 +290,7 @@ function Toggle(props: {
         disabled={props.disabled}
         onClick={props.onChange}
         className={classNames({
-          "rounded-r py-2 px-4 border-solid border border-gray-300 -ml-[1px] transition text-sm font-semibold":
+          "rounded-r-lg py-2 px-4 border-solid border border-gray-300 -ml-[1px] transition text-sm font-semibold":
             true,
           "bg-gray-100": props.checked,
           "bg-gray-50 text-gray-500 cursor-not-allowed": props.disabled,

@@ -68,7 +68,7 @@ export default function RootLayout({
             </SignedIn>
           </header>
           {children}
-          <footer className="h-20 flex gap-1 px-20 items-center font-medium">
+          <footer className="h-20 flex gap-1 px-20 items-center font-medium border-t">
             <Image
               src="/clerk.svg"
               alt="Clerk Logo"
