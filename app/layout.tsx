@@ -7,6 +7,7 @@ import {
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,21 +43,23 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <header className="flex h-20 px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
-            <Image
-              src="/clerk.svg"
-              alt="Clerk Logo"
-              width={102}
-              height={32}
-              priority
-            />
-            X
-            <Image
-              src="/next.svg"
-              alt="Next.js Logo"
-              width={90}
-              height={18}
-              priority
-            />
+            <Link href="/" className="flex h-20 gap-4 items-center">
+              <Image
+                src="/clerk.svg"
+                alt="Clerk Logo"
+                width={102}
+                height={32}
+                priority
+              />
+              X
+              <Image
+                src="/next.svg"
+                alt="Next.js Logo"
+                width={90}
+                height={18}
+                priority
+              />
+            </Link>
             <div className="grow" />
             <SignedIn>
               <OrganizationSwitcher />

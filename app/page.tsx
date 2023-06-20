@@ -26,19 +26,19 @@ export default function Home() {
                 <RightArrow />
               </div>
             </Link>
-            <button className="py-2 px-4 flex gap-2">
+            <a className="py-2 px-4 flex gap-2" href="#features">
               Learn more{" "}
               <div className="m-auto">
                 <DownArrow />
               </div>
-            </button>
+            </a>
           </div>
         </div>
         <div className="flex flex-col justify-center">
           <Image src={componentsImg} alt="Clerk embeddable components" />
         </div>
       </article>
-      <article className="bg-opacity-5 bg-black px-20 py-24">
+      <article className="bg-opacity-5 bg-black px-20 py-24" id="features">
         <h2 className="text-3xl font-semibold">What's under the hood?</h2>
         <p className="font-medium">
           This starter repo uses some of the following features supported by
