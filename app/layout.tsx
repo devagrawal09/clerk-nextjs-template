@@ -1,4 +1,9 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  OrganizationSwitcher,
+  SignedIn,
+  UserButton,
+} from "@clerk/nextjs";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
@@ -36,7 +41,7 @@ export default function RootLayout({
     >
       <html lang="en">
         <body className={inter.className}>
-          <header className="flex h-20 pl-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
+          <header className="flex h-20 px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
             <Image
               src="/clerk.svg"
               alt="Clerk Logo"
@@ -52,9 +57,14 @@ export default function RootLayout({
               height={18}
               priority
             />
+            <div className="grow" />
+            <SignedIn>
+              <OrganizationSwitcher />
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </header>
           {children}
-          <footer className="h-20 flex gap-1 px-20 items-center">
+          <footer className="h-20 flex gap-1 px-20 items-center font-medium">
             <Image
               src="/clerk.svg"
               alt="Clerk Logo"

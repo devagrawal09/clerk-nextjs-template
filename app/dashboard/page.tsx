@@ -12,13 +12,13 @@ export default async function DashboardPage() {
   const user = await clerkClient.users.getUser(userId);
 
   return (
-    <div className="p-8">
+    <div className="py-16 px-20">
       {user && (
         <>
-          <h1 className="text-3xl text-black">
-            Welcome, {user.firstName} {user.lastName}
+          <h1 className="text-3xl text-black font-semibold">
+            👋 Hi, {user.firstName}
           </h1>
-          <div className="mt-4 grid lg:grid-cols-3 gap-4">
+          <div className="mt-8 grid lg:grid-cols-3 gap-4">
             <UserDetails />
             <SessionDetails />
             <OrgDetails />
