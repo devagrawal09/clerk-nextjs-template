@@ -2,7 +2,7 @@
 
 import { useOrganization, useSession, useUser } from "@clerk/nextjs";
 import classNames from "classnames";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CopyIcon, Dot } from "../icons";
 import Image from "next/image";
 
@@ -35,11 +35,7 @@ export function UserDetails() {
                 <dt className="text-sm font-semibold">User ID</dt>
                 <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2 flex gap-2">
                   {user.id}
-                  <button
-                    onClick={() => navigator.clipboard.writeText(user.id)}
-                  >
-                    <CopyIcon />
-                  </button>
+                  <CopyButton text={user.id} />
                 </dd>
               </div>
               <div className="px-8 py-2">
@@ -127,11 +123,7 @@ export function SessionDetails() {
                 <dt className="text-sm font-semibold">Session ID</dt>
                 <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2 flex gap-2">
                   {session.id}
-                  <button
-                    onClick={() => navigator.clipboard.writeText(session.id)}
-                  >
-                    <CopyIcon />
-                  </button>
+                  <CopyButton text={session.id} />
                 </dd>
               </div>
               <div className="px-8 py-2">
@@ -200,13 +192,7 @@ export function OrgDetails() {
                   <dt className="text-sm font-semibold">Organization ID</dt>
                   <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2 flex gap-2">
                     {organization.id}
-                    <button
-                      onClick={() =>
-                        navigator.clipboard.writeText(organization.id)
-                      }
-                    >
-                      <CopyIcon />
-                    </button>
+                    <CopyButton text={organization.id} />
                   </dd>
                 </div>
                 <div className="px-8 py-2">
@@ -292,5 +278,40 @@ function Toggle(props: {
         JSON
       </button>
     </div>
+  );
+}
+
+function CopyButton(props: { text: string }) {
+  const [tooltipShown, setTooltipShown] = useState(false);
+
+  useEffect(() => {
+    if (tooltipShown) {
+      const timeout = setTimeout(() => setTooltipShown(false), 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [tooltipShown]);
+
+  return (
+    <>
+      <button
+        onClick={() => {
+          if (navigator.clipboard) navigator.clipboard.writeText(props.text);
+          setTooltipShown(true);
+        }}
+      >
+        <CopyIcon />
+      </button>
+
+      <div
+        className={classNames({
+          "absolute z-10 bg-gray-900 text-white rounded p-2 text-xs transition-all ease-in-out translate-x-60 shadow-sm shadow-gray-500":
+            true,
+          "translate-y-10 opacity-0": !tooltipShown,
+          "translate-y-6": tooltipShown,
+        })}
+      >
+        Copied!
+      </div>
+    </>
   );
 }
