@@ -1,7 +1,6 @@
-import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import componentsImg from "./assets/components.png";
+import componentsImg from "./assets/components.svg";
 import { DownArrow, RightArrow } from "./icons";
 
 export default function Home() {
