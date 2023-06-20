@@ -1,6 +1,7 @@
 import { auth, clerkClient } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import { OrgDetails, SessionDetails, UserDetails } from "./details";
+import Link from "next/link";
 
 export default async function DashboardPage() {
   const { userId } = auth();
@@ -23,6 +24,16 @@ export default async function DashboardPage() {
             <SessionDetails />
             <OrgDetails />
           </div>
+          <h2 className="text-3xl text-black font-semibold mt-16 mb-4">
+            What's next?
+          </h2>
+          <Link
+            className="text-primary font-medium hover:underline"
+            href="https://clerk.com/docs"
+            target="_blank"
+          >
+            Read documentation --&gt;
+          </Link>
         </>
       )}
     </div>
