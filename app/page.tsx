@@ -2,13 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import componentsImg from "./assets/components.svg";
 import { DownArrow, RightArrow } from "./icons";
+import "./gradient-transition.css";
 
 export default function Home() {
   return (
     <main className="">
       <article className="grid-cols-2 grid">
         <div className="px-20 py-48">
-          <h1 className="text-6xl bg-gradient-to-r from-[#63DFFA] to-[#6C47FF] bg-clip-text text-transparent font-semibold">
+          <h1 className="text-6xl gradient text-transparent font-semibold">
             Auth starts here.
           </h1>
           <p className="mt-2 text-lg">
@@ -18,14 +19,21 @@ export default function Home() {
           <div className="mt-8 flex gap-2">
             <Link
               href="/sign-up"
-              className="py-2 px-4 bg-primary text-white rounded-lg flex content-center gap-2"
+              className="py-2 px-4 bg-primary text-white rounded-lg flex content-center gap-2
+               hover:bg-opacity-90 transition-colors duration-100
+              "
             >
               Sign up{" "}
               <div className="m-auto">
                 <RightArrow />
               </div>
             </Link>
-            <a className="py-2 px-4 flex gap-2" href="#features">
+            <a
+              className="py-2 px-4 flex gap-2 bg-gray-100 bg-opacity-10 rounded-lg
+                hover:bg-opacity-90 transition duration-100
+            "
+              href="#features"
+            >
               Learn more{" "}
               <div className="m-auto">
                 <DownArrow />
