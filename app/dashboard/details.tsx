@@ -138,7 +138,7 @@ export function SessionDetails() {
                 <dt className="text-sm font-semibold mb-1">Status</dt>
                 <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
                   {session.status === `active` && (
-                    <span className="text-sm bg-success-50 text-success-700 flex w-min gap-1 px-2 py-[1px] rounded-2xl">
+                    <span className="text-xs bg-success-50 text-success-700 flex w-min gap-1 px-2 py-[1px] rounded-2xl font-medium">
                       <div className="m-auto">
                         <Dot />
                       </div>
