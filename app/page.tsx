@@ -39,12 +39,12 @@ export default function Home() {
       </article>
       <article className="bg-opacity-5 bg-black px-20 py-24" id="features">
         <h2 className="text-3xl font-semibold">What's under the hood?</h2>
-        <p className="font-medium">
+        <p className="mt-2">
           This starter repo uses some of the following features supported by
           Clerk. To learn more, read our{" "}
           <a
             href="https://clerk.com/docs"
-            className="text-primary hover:underline"
+            className="text-primary hover:underline font-medium"
           >
             documentation
           </a>
@@ -56,12 +56,12 @@ export default function Home() {
               Embedded Components with Customization
             </h3>
             <p className="text-[#344054]">
-              Make our components your own with our extensive customization
+              Make our components your x`own with our extensive customization
               options.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline font-medium">
-              Read components documentation
+            <a href="" className="text-primary hover:underline">
+              Read components documentation -&gt;
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
@@ -71,8 +71,8 @@ export default function Home() {
               you need.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline font-medium">
-              Read hooks documentation
+            <a href="" className="text-primary hover:underline">
+              Read hooks documentation -&gt;
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
@@ -82,8 +82,8 @@ export default function Home() {
               app.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline font-medium">
-              Read organizations documentation
+            <a href="" className="text-primary hover:underline">
+              Read organizations documentation -&gt;
             </a>
           </div>
         </div>

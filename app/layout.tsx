@@ -8,6 +8,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { Times } from "./icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,7 +52,7 @@ export default function RootLayout({
                 height={32}
                 priority
               />
-              X
+              <Times />
               <Image
                 src="/next.svg"
                 alt="Next.js Logo"
