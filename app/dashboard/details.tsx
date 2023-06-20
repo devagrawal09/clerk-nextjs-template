@@ -55,7 +55,7 @@ export function UserDetails() {
                 </dd>
               </div>
               <div className="px-8 py-2">
-                <dt className="text-sm font-semibold mb-1">Email</dt>
+                <dt className="text-sm font-semibold mb-1">Email addresses</dt>
                 <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
                   {user.emailAddresses.map((email) => (
                     <div key={email.id} className="flex gap-2 mb-1">
