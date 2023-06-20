@@ -42,7 +42,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={inter.className}>
+        <body className={`${inter.className} min-h-screen flex flex-col`}>
           <header className="flex h-20 px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
             <Link href="/" className="flex h-20 gap-4 items-center">
               <Image
@@ -67,7 +67,7 @@ export default function RootLayout({
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </header>
-          {children}
+          <main className="grow">{children}</main>
           <footer className="h-20 flex gap-1 px-20 items-center font-medium border-t">
             <Image
               src="/clerk.svg"
