@@ -8,7 +8,9 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { Times } from "./icons";
+import { Docs, Github, Times } from "./icons";
+import { Twitter } from "./icons";
+import { Discord } from "./icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -77,30 +79,36 @@ export default function RootLayout({
               priority
             />
             <span className="text-sm">© 2023</span>
-            <nav className="grow flex gap-8 justify-end">
+            <nav className="grow flex gap-2 justify-end">
               <a
-                className="text-primary hover:underline"
-                href="https://clerk.com"
+                className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
+                href="https://clerk.com/docs"
               >
-                clerk.com
+                <div className="m-auto">
+                  <Docs />
+                </div>{" "}
+                Go to Docs
               </a>
               <a
-                className="text-primary hover:underline"
+                className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
                 href="https://clerk.com"
               >
-                Twitter
+                <div className="m-auto">
+                  <Github />
+                </div>{" "}
+                View on Github
               </a>
               <a
-                className="text-primary hover:underline"
+                className="p-2 hover:underline flex flex-col justify-center"
                 href="https://clerk.com"
               >
-                Discord
+                <Twitter />
               </a>
               <a
-                className="text-primary hover:underline"
+                className="p-2 hover:underline flex flex-col justify-center"
                 href="https://clerk.com"
               >
-                Documentation
+                <Discord />
               </a>
             </nav>
           </footer>

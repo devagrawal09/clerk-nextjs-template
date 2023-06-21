@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import componentsImg from "./assets/components.svg";
 import { DownArrow, RightArrow } from "./icons";
-import "./gradient-transition.css";
+import "./home.css";
 
 export default function Home() {
   return (
@@ -19,9 +19,7 @@ export default function Home() {
           <div className="mt-8 flex gap-2">
             <Link
               href="/sign-up"
-              className="py-2 px-4 bg-primary text-white rounded-lg flex content-center gap-2
-               hover:bg-opacity-90 transition-colors duration-100
-              "
+              className="py-2 px-4 bg-primary-600 text-white rounded-lg flex content-center gap-2 transition-colors duration-200 hover:bg-primary-700 font-semibold"
             >
               Sign up{" "}
               <div className="m-auto">
@@ -29,9 +27,7 @@ export default function Home() {
               </div>
             </Link>
             <a
-              className="py-2 px-4 flex gap-2 bg-gray-100 bg-opacity-10 rounded-lg
-                hover:bg-opacity-90 transition duration-100
-            "
+              className="py-2 px-4 flex gap-2 rounded-lg transition duration-100 font-semibold text-gray-600 hover:text-gray-800"
               href="#features"
             >
               Learn more{" "}
@@ -52,7 +48,7 @@ export default function Home() {
           Clerk. To learn more, read our{" "}
           <a
             href="https://clerk.com/docs"
-            className="text-primary hover:underline font-medium"
+            className="text-primary-600 hover:underline font-medium"
           >
             documentation
           </a>
@@ -68,8 +64,8 @@ export default function Home() {
               options.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline">
-              Read components documentation -&gt;
+            <a href="" className="text-primary-600 cta hover:underline">
+              Components documentation <span className="arrow">-&gt;</span>
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
@@ -79,8 +75,8 @@ export default function Home() {
               you need.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline">
-              Read hooks documentation -&gt;
+            <a href="" className="text-primary-600 cta hover:underline">
+              Hooks documentation <span className="arrow">-&gt;</span>
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
@@ -90,8 +86,8 @@ export default function Home() {
               app.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary hover:underline">
-              Read organizations documentation -&gt;
+            <a href="" className="text-primary-600 cta hover:underline">
+              Organizations documentation <span className="arrow">-&gt;</span>
             </a>
           </div>
         </div>

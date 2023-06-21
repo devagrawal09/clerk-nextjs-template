@@ -28,11 +28,11 @@ export default async function DashboardPage() {
             What's next?
           </h2>
           <Link
-            className="text-primary font-medium hover:underline"
+            className="text-primary-600 font-medium hover:underline"
             href="https://clerk.com/docs"
             target="_blank"
           >
-            Read documentation --&gt;
+            Read documentation -&gt;
           </Link>
         </>
       )}
