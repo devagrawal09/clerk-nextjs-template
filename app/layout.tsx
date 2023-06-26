@@ -92,22 +92,22 @@ export default function RootLayout({
               </a>
               <a
                 className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
-                href="https://clerk.com"
+                href="https://github.com/devagrawal09/clerk-nextjs-template"
               >
                 <div className="m-auto">
                   <Github />
-                </div>{" "}
+                </div>
                 <span className="hidden sm:inline"> View on Github</span>
               </a>
               <a
                 className="p-2 hover:underline flex flex-col justify-center"
-                href="https://clerk.com"
+                href="https://twitter.com/ClerkDev"
               >
                 <Twitter />
               </a>
               <a
                 className="p-2 hover:underline flex flex-col justify-center"
-                href="https://clerk.com"
+                href="https://discord.com/invite/b5rXHjAg7A"
               >
                 <Discord />
               </a>
