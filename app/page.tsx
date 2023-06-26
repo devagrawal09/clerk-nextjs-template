@@ -13,7 +13,7 @@ export default function Home() {
             Auth starts here.
           </h1>
           <p className="mt-2 text-lg">
-            Download our Next.js starter that uses Clerk for authentication and
+            Download our Next.js template that uses Clerk for authentication and
             user management.
           </p>
           <div className="mt-8 flex gap-2">
@@ -47,7 +47,7 @@ export default function Home() {
       >
         <h2 className="text-3xl font-semibold">What's under the hood?</h2>
         <p className="mt-2">
-          This starter repo uses some of the following features supported by
+          This template repo uses some of the following features supported by
           Clerk. To learn more, read our{" "}
           <a
             href="https://clerk.com/docs"
