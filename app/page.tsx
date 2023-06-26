@@ -14,14 +14,14 @@ export default function Home() {
           </h1>
           <p className="mt-2 text-lg">
             Download our Next.js starter that uses Clerk for authentication and
-            user management. Get started by signing up for an account.
+            user management.
           </p>
           <div className="mt-8 flex gap-2">
             <Link
               href="/sign-up"
               className="py-2 px-4 bg-primary-600 text-white rounded-lg flex content-center gap-2 transition-colors duration-200 hover:bg-primary-700 font-semibold"
             >
-              Sign up{" "}
+              View Demo{" "}
               <div className="m-auto">
                 <RightArrow />
               </div>
@@ -59,34 +59,46 @@ export default function Home() {
             <h3 className="text-lg font-medium">
               Embedded Components with Customization
             </h3>
-            <p className="text-[#344054]">
-              Make our components your x`own with our extensive customization
+            <p className="text-gray-700">
+              Make our components your own with our extensive customization
               options.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary-600 cta hover:underline">
+            <a
+              href="https://clerk.com/docs/component-reference/customization"
+              className="text-primary-600 cta hover:underline"
+              target="_blank"
+            >
               Components documentation <span className="arrow">-&gt;</span>
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
             <h3 className="text-lg font-medium">Built-in React Hooks</h3>
-            <p className="text-[#344054]">
+            <p className="text-gray-700">
               Building a custom auth flow? Our hooks give all the functionality
               you need.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary-600 cta hover:underline">
+            <a
+              href="https://clerk.com/docs/reference/clerk-react/installation"
+              className="text-primary-600 cta hover:underline"
+              target="_blank"
+            >
               Hooks documentation <span className="arrow">-&gt;</span>
             </a>
           </div>
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
             <h3 className="text-lg font-medium">Organizations</h3>
-            <p className="text-[#344054]">
+            <p className="text-gray-700">
               Quickly add collaboration and multi-tenancy capabilities into your
               app.
             </p>
             <div className="grow"></div>
-            <a href="" className="text-primary-600 cta hover:underline">
+            <a
+              href="https://clerk.com/docs/organizations/overview"
+              className="text-primary-600 cta hover:underline"
+              target="_blank"
+            >
               Organizations documentation <span className="arrow">-&gt;</span>
             </a>
           </div>

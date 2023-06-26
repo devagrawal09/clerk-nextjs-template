@@ -8,9 +8,9 @@
   <br />
 </p>
 
-# Next.js Clerk Starter
+# Next.js Clerk Template
 
-This example shows how to use [Clerk](https://www.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter) with Next.js. The example Next.js application features adding sign up, sign in, and profile management.
+This template shows how to use [Clerk](https://www.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter) with Next.js. The example Next.js application features adding sign up, sign in, and profile management, as well as extras like component customizations, built-in React hooks, and organizations.
 
 [![chat on Discord](https://img.shields.io/discord/856971667393609759.svg?logo=discord)](https://discord.com/invite/b5rXHjAg7A)
 [![documentation](https://img.shields.io/badge/documentation-clerk-green.svg)](https://docs.clerk.dev)
