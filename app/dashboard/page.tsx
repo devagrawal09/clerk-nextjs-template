@@ -13,7 +13,7 @@ export default async function DashboardPage() {
   const user = await clerkClient.users.getUser(userId);
 
   return (
-    <div className="py-16 px-20">
+    <div className="py-12 sm:py-16 px-8 md:px-20">
       {user && (
         <>
           <h1 className="text-3xl text-black font-semibold">

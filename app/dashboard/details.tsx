@@ -252,7 +252,7 @@ export function OrgDetails() {
             </div>
           )
         ) : (
-          <div className="text-gray-700 px-4 py-5 text-sm">
+          <div className="text-gray-700 px-8 pb-5 text-sm">
             You are currently logged in to your personal workspace.
             <br />
             Create or switch to an organization to see its details.
