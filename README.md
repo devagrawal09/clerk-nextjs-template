@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_vercel_starter" target="_blank" align="center">
+  <a href="https://www.clerk.dev/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_vercel_template" target="_blank" align="center">
     <picture style="margin-left: 4rem;">
       <source srcset="./public/clerk.svg">
       <img src="./public/clerk.svg" height="64">
@@ -10,7 +10,7 @@
 
 # Next.js Clerk Template
 
-This template shows how to use [Clerk](https://www.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter) with Next.js. The example Next.js application features adding sign up, sign in, and profile management, as well as extras like component customizations, built-in React hooks, and organizations.
+This template shows how to use [Clerk](https://www.clerk.dev/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template) with Next.js. The example Next.js application features adding sign up, sign in, and profile management, as well as extras like component customizations, built-in React hooks, and organizations.
 
 [![chat on Discord](https://img.shields.io/discord/856971667393609759.svg?logo=discord)](https://discord.com/invite/b5rXHjAg7A)
 [![documentation](https://img.shields.io/badge/documentation-clerk-green.svg)](https://docs.clerk.dev)
@@ -28,7 +28,7 @@ Would you like to work on Open Source software and help maintain this repository
 
 A hosted demo of this example is available at [clerk-nextjs-template.vercel.app](https://clerk-nextjs-template.vercel.app/)
 
-## Running the starter
+## Running the template
 
 ```bash
 git clone https://github.com/devagrawal09/clerk-nextjs-template
@@ -37,7 +37,7 @@ git clone https://github.com/devagrawal09/clerk-nextjs-template
 To run the example locally you need to:
 
 1. Sign up for a Clerk account at https://clerk.dev.
-2. Go to [Clerk's dashboard](https://dashboard.clerk.dev/?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter) and create an application.
+2. Go to [Clerk's dashboard](https://dashboard.clerk.dev/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template) and create an application.
 3. Set the required Clerk environment variables as shown in [the example env file](./.env.example).
 4. `npm install` the required dependencies.
 5. `npm run dev` to launch the development server.
@@ -46,8 +46,8 @@ To run the example locally you need to:
 
 To learn more about Clerk and Next.js, check out the following resources:
 
-- [Quickstart: Get started with Next.js and Clerk](https://clerk.dev/docs/quickstarts/get-started-with-nextjs?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter)
-- [Clerk Documentation](https://clerk.dev/docs?utm_source=github&utm_medium=starter_repos&utm_campaign=nextjs_starter)
+- [Quickstart: Get started with Next.js and Clerk](https://clerk.dev/docs/quickstarts/get-started-with-nextjs?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template)
+- [Clerk Documentation](https://clerk.dev/docs?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template)
 - [Next.js Documentation](https://nextjs.org/docs)
 
 ## Contact
