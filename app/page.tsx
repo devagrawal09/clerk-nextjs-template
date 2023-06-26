@@ -7,9 +7,9 @@ import "./home.css";
 export default function Home() {
   return (
     <main className="">
-      <article className="grid-cols-2 grid">
-        <div className="px-20 py-48">
-          <h1 className="text-6xl gradient text-transparent font-semibold">
+      <article className="grid lg:grid-cols-2">
+        <div className="px-8 md:px-20 py-20 lg:py-48">
+          <h1 className="text-5xl md:text-6xl gradient text-transparent font-semibold">
             Auth starts here.
           </h1>
           <p className="mt-2 text-lg">
@@ -41,7 +41,10 @@ export default function Home() {
           <Image src={componentsImg} alt="Clerk embeddable components" />
         </div>
       </article>
-      <article className="bg-opacity-5 bg-black px-20 py-24" id="features">
+      <article
+        className="bg-opacity-5 bg-black px-8 md:px-20 py-12 md:py-24"
+        id="features"
+      >
         <h2 className="text-3xl font-semibold">What's under the hood?</h2>
         <p className="mt-2">
           This starter repo uses some of the following features supported by
@@ -54,7 +57,7 @@ export default function Home() {
           </a>
           .
         </p>
-        <div className="grid grid-cols-3 mt-8 gap-8">
+        <div className="grid lg:grid-cols-3 mt-8 gap-8">
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
             <h3 className="text-lg font-medium">
               Embedded Components with Customization

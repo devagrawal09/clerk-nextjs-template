@@ -70,7 +70,7 @@ export default function RootLayout({
             </SignedIn>
           </header>
           <main className="grow">{children}</main>
-          <footer className="h-20 flex gap-1 px-20 items-center font-medium border-t">
+          <footer className="h-20 flex gap-1 px-8 md:px-20 items-center font-medium border-t">
             <Image
               src="/clerk.svg"
               alt="Clerk Logo"
@@ -79,15 +79,16 @@ export default function RootLayout({
               priority
             />
             <span className="text-sm">© 2023</span>
-            <nav className="grow flex gap-2 justify-end">
+            <nav className="grow flex sm:gap-2 justify-end">
               <a
                 className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
                 href="https://clerk.com/docs"
               >
                 <div className="m-auto">
                   <Docs />
-                </div>{" "}
-                Go to Docs
+                </div>
+                <span className="hidden sm:inline"> Go to Docs</span>
+                <span className="sm:hidden inline"> Docs</span>
               </a>
               <a
                 className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
@@ -96,7 +97,7 @@ export default function RootLayout({
                 <div className="m-auto">
                   <Github />
                 </div>{" "}
-                View on Github
+                <span className="hidden sm:inline"> View on Github</span>
               </a>
               <a
                 className="p-2 hover:underline flex flex-col justify-center"
