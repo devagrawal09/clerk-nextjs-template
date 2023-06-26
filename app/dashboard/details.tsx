@@ -45,18 +45,22 @@ export function UserDetails() {
                   <CopyButton text={user.id} />
                 </dd>
               </div>
-              <div className="px-8 py-2">
-                <dt className="text-sm font-semibold mb-1">First Name</dt>
-                <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
-                  {user.firstName}
-                </dd>
-              </div>
-              <div className="px-8 py-2">
-                <dt className="text-sm font-semibold mb-1">Last Name</dt>
-                <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
-                  {user.lastName}
-                </dd>
-              </div>
+              {user.firstName && (
+                <div className="px-8 py-2">
+                  <dt className="text-sm font-semibold mb-1">First Name</dt>
+                  <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
+                    {user.firstName}
+                  </dd>
+                </div>
+              )}
+              {user.lastName && (
+                <div className="px-8 py-2">
+                  <dt className="text-sm font-semibold mb-1">Last Name</dt>
+                  <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
+                    {user.lastName}
+                  </dd>
+                </div>
+              )}
               <div className="px-8 py-2">
                 <dt className="text-sm font-semibold mb-1">Email addresses</dt>
                 <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
@@ -72,12 +76,12 @@ export function UserDetails() {
                   ))}
                 </dd>
               </div>
-              {user.profileImageUrl && (
+              {user.imageUrl && (
                 <div className="px-8 py-2">
                   <dt className="text-sm font-semibold mb-1">Profile Image</dt>
                   <dd className="mt-1 text-sm text-gray-600 sm:mt-0 sm:col-span-2">
                     <img
-                      src={user.profileImageUrl}
+                      src={user.imageUrl}
                       className="rounded-full w-12 h-12"
                     />
                   </dd>

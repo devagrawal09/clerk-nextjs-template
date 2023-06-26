@@ -17,7 +17,7 @@ export default async function DashboardPage() {
       {user && (
         <>
           <h1 className="text-3xl text-black font-semibold">
-            👋 Hi, {user.firstName}
+            👋 Hi, {user.firstName || `Stranger`}
           </h1>
           <div className="mt-8 grid lg:grid-cols-3 gap-4">
             <UserDetails />

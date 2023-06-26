@@ -65,7 +65,7 @@ export default function RootLayout({
             </Link>
             <div className="grow" />
             <SignedIn>
-              <OrganizationSwitcher />
+              <OrganizationSwitcher afterCreateOrganizationUrl="/dashboard" />
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </header>
