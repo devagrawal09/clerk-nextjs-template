@@ -30,7 +30,7 @@ export function UserDetails() {
       </div>
       {isLoaded && user ? (
         jsonOutput ? (
-          <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
+          <div className="overflow-scroll max-h-96 pb-6">
             <pre className="px-8 sm:px-6 text-black text-sm">
               {JSON.stringify(user, null, 2)}
             </pre>
@@ -122,7 +122,7 @@ export function SessionDetails() {
       </div>
       {isLoaded && session ? (
         jsonOutput ? (
-          <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
+          <div className="overflow-scroll max-h-96 pb-6">
             <pre className="px-4 sm:px-6 text-black text-sm">
               {JSON.stringify(
                 {
@@ -205,7 +205,7 @@ export function OrgDetails() {
       {isLoaded ? (
         organization ? (
           jsonOutput ? (
-            <div className="overflow-y-scroll overflow-x-clip max-h-96 pb-6">
+            <div className="overflow-scroll max-h-96 pb-6">
               <pre className="px-4 sm:px-6 text-black text-sm">
                 {JSON.stringify(organization, null, 2)}
               </pre>
