@@ -45,8 +45,8 @@ export default function RootLayout({
     >
       <html lang="en">
         <body className={`${inter.className} min-h-screen flex flex-col`}>
-          <header className="flex h-20 px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
-            <Link href="/" className="flex h-20 gap-4 items-center">
+          <header className="flex h-20 px-4 sm:px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
+            <Link href="/" className="flex h-20 gap-2 sm:gap-4 items-center">
               <Image
                 src="/clerk.svg"
                 alt="Clerk Logo"
@@ -65,7 +65,21 @@ export default function RootLayout({
             </Link>
             <div className="grow" />
             <SignedIn>
-              <OrganizationSwitcher afterCreateOrganizationUrl="/dashboard" />
+              <div className="sm:block hidden">
+                <OrganizationSwitcher afterCreateOrganizationUrl="/dashboard" />
+              </div>
+              <div className="sm:hidden block">
+                <OrganizationSwitcher
+                  afterCreateOrganizationUrl="/dashboard"
+                  appearance={{
+                    elements: {
+                      organizationSwitcherTriggerIcon: `hidden`,
+                      organizationPreviewTextContainer: `hidden`,
+                      organizationSwitcherTrigger: `pr-0`,
+                    },
+                  }}
+                />
+              </div>
               <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </header>
