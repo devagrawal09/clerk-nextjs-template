@@ -101,7 +101,7 @@ export default function RootLayout({
                 <div className="m-auto">
                   <Docs />
                 </div>
-                <span className="hidden sm:inline"> Go to Docs</span>
+                <span className="hidden sm:inline"> Visit Clerk Docs</span>
                 <span className="sm:hidden inline"> Docs</span>
               </a>
               <a

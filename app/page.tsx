@@ -13,8 +13,8 @@ export default function Home() {
             Auth starts here.
           </h1>
           <p className="mt-2 text-lg">
-            Download our Next.js template that uses Clerk for authentication and
-            user management.
+            A simple and powerful Next.js template featuring authentication and
+            user management powered by Clerk.
           </p>
           <div className="mt-8 flex gap-2">
             <Link
@@ -48,7 +48,7 @@ export default function Home() {
         <h2 className="text-3xl font-semibold">What's under the hood?</h2>
         <p className="mt-2">
           This template repo uses some of the following features supported by
-          Clerk. To learn more, read our{" "}
+          Clerk. To learn more, read the{" "}
           <a
             href="https://clerk.com/docs"
             className="text-primary-600 hover:underline font-medium"
@@ -78,8 +78,8 @@ export default function Home() {
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
             <h3 className="text-lg font-medium">Built-in React Hooks</h3>
             <p className="text-gray-700">
-              Building a custom auth flow? Our hooks give all the functionality
-              you need.
+              Building a custom auth flow? Clerk's hooks give all the
+              functionality you need.
             </p>
             <div className="grow"></div>
             <a
@@ -93,8 +93,8 @@ export default function Home() {
           <div className="bg-white p-8 rounded-2xl shadow-lg flex flex-col gap-1 h-56">
             <h3 className="text-lg font-medium">Organizations</h3>
             <p className="text-gray-700">
-              Quickly add collaboration and multi-tenancy capabilities with our
-              components.
+              Quickly add collaboration and multi-tenancy capabilities with
+              Clerk's components.
             </p>
             <div className="grow"></div>
             <a
