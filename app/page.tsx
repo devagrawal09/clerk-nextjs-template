@@ -59,7 +59,7 @@ export default function Home() {
         </p>
         <div className="grid gap-8 mt-8 lg:grid-cols-3">
           <div className="flex flex-col h-56 gap-1 p-8 bg-white shadow-lg rounded-2xl">
-            <h3 className="text-lg font-medium">Customizeable Components</h3>
+            <h3 className="text-lg font-medium">Customizable Components</h3>
             <p className="text-gray-700">
               Prebuilt components to handle essential functionality like user
               sign-in, sign-up, and account management.
