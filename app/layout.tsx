@@ -16,9 +16,9 @@ import { Discord } from "./icons";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Next.js Clerk Starter",
+  title: "Next.js Clerk Template",
   description:
-    "This is a starter project for building a Next.js app with Clerk.",
+    "A simple and powerful Next.js template featuring authentication and user management powered by Clerk.",
 };
 
 export default function RootLayout({
