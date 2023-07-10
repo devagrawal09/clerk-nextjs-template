@@ -45,8 +45,8 @@ export default function RootLayout({
     >
       <html lang="en">
         <body className={`${inter.className} min-h-screen flex flex-col`}>
-          <header className="flex h-20 px-4 sm:px-8 gap-4 items-center border-b border-solid border-black border-opacity-20">
-            <Link href="/" className="flex h-20 gap-2 sm:gap-4 items-center">
+          <header className="flex items-center h-20 gap-4 px-4 border-b border-black border-solid sm:px-8 border-opacity-20">
+            <Link href="/" className="flex items-center h-20 gap-2 sm:gap-4">
               <Image
                 src="/clerk.svg"
                 alt="Clerk Logo"
@@ -65,10 +65,10 @@ export default function RootLayout({
             </Link>
             <div className="grow" />
             <SignedIn>
-              <div className="sm:block hidden">
+              <div className="hidden sm:block">
                 <OrganizationSwitcher afterCreateOrganizationUrl="/dashboard" />
               </div>
-              <div className="sm:hidden block">
+              <div className="block sm:hidden">
                 <OrganizationSwitcher
                   afterCreateOrganizationUrl="/dashboard"
                   appearance={{
@@ -84,7 +84,7 @@ export default function RootLayout({
             </SignedIn>
           </header>
           <main className="grow">{children}</main>
-          <footer className="h-20 flex gap-1 px-8 md:px-20 items-center font-medium border-t">
+          <footer className="flex items-center h-20 gap-1 px-8 font-medium border-t md:px-20">
             <Image
               src="/clerk.svg"
               alt="Clerk Logo"
@@ -93,19 +93,19 @@ export default function RootLayout({
               priority
             />
             <span className="text-sm">© 2023</span>
-            <nav className="grow flex sm:gap-2 justify-end">
+            <nav className="flex justify-end grow sm:gap-2">
               <a
-                className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
-                href="https://clerk.com/docs"
+                className="flex gap-2 px-3 py-2 text-sm font-semibold text-gray-600 transition duration-100 rounded-md hover:text-gray-800"
+                href="https://clerk.com/docs?utm_source=vercel-template&utm_medium=template_repos&utm_campaign=nextjs_template"
               >
                 <div className="m-auto">
                   <Docs />
                 </div>
                 <span className="hidden sm:inline"> Visit Clerk Docs</span>
-                <span className="sm:hidden inline"> Docs</span>
+                <span className="inline sm:hidden"> Docs</span>
               </a>
               <a
-                className="px-3 py-2 rounded-md text-gray-600 flex gap-2 font-semibold text-sm hover:text-gray-800 transition duration-100"
+                className="flex gap-2 px-3 py-2 text-sm font-semibold text-gray-600 transition duration-100 rounded-md hover:text-gray-800"
                 href="https://github.com/devagrawal09/clerk-nextjs-template"
               >
                 <div className="m-auto">
@@ -114,13 +114,13 @@ export default function RootLayout({
                 <span className="hidden sm:inline"> View on Github</span>
               </a>
               <a
-                className="p-2 hover:underline flex flex-col justify-center"
+                className="flex flex-col justify-center p-2 hover:underline"
                 href="https://twitter.com/ClerkDev"
               >
                 <Twitter />
               </a>
               <a
-                className="p-2 hover:underline flex flex-col justify-center"
+                className="flex flex-col justify-center p-2 hover:underline"
                 href="https://discord.com/invite/b5rXHjAg7A"
               >
                 <Discord />
