@@ -13,26 +13,27 @@ export default async function DashboardPage() {
   const user = await clerkClient.users.getUser(userId);
 
   return (
-    <div className="py-12 sm:py-16 px-8 md:px-20">
+    <div className="px-8 py-12 sm:py-16 md:px-20">
       {user && (
         <>
-          <h1 className="text-3xl text-black font-semibold">
+          <h1 className="text-3xl font-semibold text-black">
             👋 Hi, {user.firstName || `Stranger`}
           </h1>
-          <div className="mt-8 grid lg:grid-cols-3 gap-4">
+          <div className="grid gap-4 mt-8 lg:grid-cols-3">
             <UserDetails />
             <SessionDetails />
             <OrgDetails />
           </div>
-          <h2 className="text-3xl text-black font-semibold mt-16 mb-4">
+          <h2 className="mt-16 mb-4 text-3xl font-semibold text-black">
             What's next?
           </h2>
+          Read the{" "}
           <Link
-            className="text-primary-600 font-medium hover:underline"
-            href="https://clerk.com/docs"
+            className="font-medium text-primary-600 hover:underline"
+            href="https://clerk.com/docs?utm_source=vercel-template&utm_medium=template_repos&utm_campaign=nextjs_template"
             target="_blank"
           >
-            Read documentation -&gt;
+            Clerk Docs -&gt;
           </Link>
         </>
       )}
