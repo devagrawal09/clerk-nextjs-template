@@ -5,6 +5,13 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { CopyIcon, Dot } from "../icons";
 import Image from "next/image";
+import "./prism.css";
+
+declare global {
+  interface Window {
+    Prism: any;
+  }
+}
 
 export function UserDetails() {
   const { isLoaded, user } = useUser();
@@ -31,9 +38,7 @@ export function UserDetails() {
       {isLoaded && user ? (
         jsonOutput ? (
           <div className="overflow-scroll max-h-96 pb-6">
-            <pre className="px-8 sm:px-6 text-black text-sm">
-              {JSON.stringify(user, null, 2)}
-            </pre>
+            <JSONOutput json={user} />
           </div>
         ) : (
           <div className="pb-6 max-h-96">
@@ -123,16 +128,12 @@ export function SessionDetails() {
       {isLoaded && session ? (
         jsonOutput ? (
           <div className="overflow-scroll max-h-96 pb-6">
-            <pre className="px-4 sm:px-6 text-black text-sm">
-              {JSON.stringify(
-                {
-                  ...session,
-                  user: undefined,
-                },
-                null,
-                2
-              )}
-            </pre>
+            <JSONOutput
+              json={{
+                ...session,
+                user: undefined,
+              }}
+            />
           </div>
         ) : (
           <div className="pb-6 max-h-96">
@@ -206,9 +207,7 @@ export function OrgDetails() {
         organization ? (
           jsonOutput ? (
             <div className="overflow-scroll max-h-96 pb-6">
-              <pre className="px-4 sm:px-6 text-black text-sm">
-                {JSON.stringify(organization, null, 2)}
-              </pre>
+              <JSONOutput json={organization} />
             </div>
           ) : (
             <div className="pb-6 max-h-96">
@@ -338,5 +337,22 @@ function CopyButton(props: { text: string }) {
         Copied!
       </div>
     </>
+  );
+}
+
+function JSONOutput(props: { json: any }) {
+  useEffect(() => {
+    if (window.Prism) {
+      console.log(`highlighting`);
+      window.Prism.highlightAll();
+    }
+  }, []);
+
+  return (
+    <pre className="px-8 sm:px-6 text-black text-sm">
+      <code className="language-json">
+        {JSON.stringify(props.json, null, 2)}
+      </code>
+    </pre>
   );
 }

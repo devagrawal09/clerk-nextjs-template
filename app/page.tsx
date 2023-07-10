@@ -59,11 +59,10 @@ export default function Home() {
         </p>
         <div className="grid gap-8 mt-8 lg:grid-cols-3">
           <div className="flex flex-col h-56 gap-1 p-8 bg-white shadow-lg rounded-2xl">
-            <h3 className="text-lg font-medium">
-              Customizeable Components
-            </h3>
+            <h3 className="text-lg font-medium">Customizeable Components</h3>
             <p className="text-gray-700">
-              Prebuilt components to handle essential functionality like user sign-in, sign-up, and account management.
+              Prebuilt components to handle essential functionality like user
+              sign-in, sign-up, and account management.
             </p>
             <div className="grow"></div>
             <a
@@ -77,7 +76,8 @@ export default function Home() {
           <div className="flex flex-col h-56 gap-1 p-8 bg-white shadow-lg rounded-2xl">
             <h3 className="text-lg font-medium">React Hooks</h3>
             <p className="text-gray-700">
-              Build custom functionality by accessing auth state, user and session data, and more with Clerk's React Hooks.
+              Build custom functionality by accessing auth state, user and
+              session data, and more with Clerk's React Hooks.
             </p>
             <div className="grow"></div>
             <a
@@ -91,7 +91,8 @@ export default function Home() {
           <div className="flex flex-col h-56 gap-1 p-8 bg-white shadow-lg rounded-2xl">
             <h3 className="text-lg font-medium">Multitenancy</h3>
             <p className="text-gray-700">
-              Seamlessly create and switch between organizations, invite and manage members, and assign custom roles.
+              Seamlessly create and switch between organizations, invite and
+              manage members, and assign custom roles.
             </p>
             <div className="grow"></div>
             <a
