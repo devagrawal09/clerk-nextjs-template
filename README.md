@@ -1,14 +1,5 @@
-<p align="center">
-  <a href="https://www.clerk.com/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_vercel_template" target="_blank" align="center">
-    <picture style="margin-left: 4rem;">
-      <source srcset="./public/clerk.svg">
-      <img src="./public/clerk.svg" height="64">
-    </picture>
-  </a>
-  <br />
-</p>
-
 # Next.js Clerk Template
+![Next.js Clerk Template](./public/og.png)
 
 This template shows how to use [Clerk](https://www.clerk.com/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template) in a Next.js.
 
