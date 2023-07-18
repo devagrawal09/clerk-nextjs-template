@@ -1,7 +1,7 @@
 # Next.js Clerk Template
 ![Next.js Clerk Template](./public/og.png)
 
-This template shows how to use [Clerk](https://www.clerk.com/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template) in a Next.js.
+This template shows how to use [Clerk](https://www.clerk.com/?utm_source=github&utm_medium=template_repos&utm_campaign=nextjs_template) in a Next.js application.
 
 Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for login, signup, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React or Next.js application.
 
